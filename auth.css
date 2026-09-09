@@ -1,3 +1,4 @@
+```css
 :root {
     --primary: #2563eb;
     --primary-dark: #1d4ed8;
@@ -26,6 +27,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family:
         Inter,
@@ -48,8 +53,13 @@ button {
     cursor: pointer;
 }
 
+/* =========================
+   AUTH PAGE
+========================= */
+
 .auth-page {
     min-height: 100vh;
+
     background:
         radial-gradient(
             circle at top left,
@@ -61,6 +71,7 @@ button {
 
 .auth-container {
     min-height: 100vh;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -74,6 +85,7 @@ button {
     overflow: hidden;
 
     padding: 60px 8%;
+
     background:
         linear-gradient(
             145deg,
@@ -91,6 +103,7 @@ button {
 
 .auth-brand::before {
     content: "";
+
     position: absolute;
 
     width: 400px;
@@ -102,10 +115,13 @@ button {
 
     top: -180px;
     right: -120px;
+
+    pointer-events: none;
 }
 
 .auth-brand::after {
     content: "";
+
     position: absolute;
 
     width: 300px;
@@ -117,10 +133,17 @@ button {
 
     bottom: -150px;
     left: -100px;
+
+    pointer-events: none;
 }
+
+/* =========================
+   LOGO
+========================= */
 
 .auth-logo {
     position: absolute;
+
     top: 40px;
     left: 8%;
 
@@ -133,6 +156,8 @@ button {
 
     font-size: 24px;
     font-weight: 800;
+
+    z-index: 5;
 }
 
 .logo-mark {
@@ -144,16 +169,25 @@ button {
 
     border-radius: 12px;
 
-    background: linear-gradient(
-        135deg,
-        var(--primary),
-        var(--cyan)
-    );
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--cyan)
+        );
 
     color: white;
+
     font-size: 21px;
     font-weight: 900;
+
+    box-shadow:
+        0 8px 20px rgba(6, 182, 212, 0.2);
 }
+
+/* =========================
+   BRAND CONTENT
+========================= */
 
 .brand-content {
     position: relative;
@@ -175,13 +209,17 @@ button {
 
     font-size: 12px;
     font-weight: 800;
+
     letter-spacing: 1px;
 }
 
 .brand-content h1 {
     font-size: clamp(38px, 5vw, 64px);
+
     line-height: 1.05;
+
     margin-bottom: 22px;
+
     letter-spacing: -2px;
 }
 
@@ -197,6 +235,10 @@ button {
     font-size: 17px;
     line-height: 1.7;
 }
+
+/* =========================
+   BENEFITS
+========================= */
 
 .auth-benefits {
     display: flex;
@@ -224,6 +266,7 @@ button {
 
 .auth-benefits span {
     color: #67e8f9;
+
     font-weight: 900;
 }
 
@@ -241,15 +284,37 @@ button {
     background: white;
 
     border: 1px solid var(--border);
+
     border-radius: 24px;
 
     box-shadow: var(--shadow);
 }
 
 .signup-card {
-    max-height: 94vh;
+    max-height: 96vh;
+
     overflow-y: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
 }
+
+.signup-card::-webkit-scrollbar {
+    width: 6px;
+}
+
+.signup-card::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.signup-card::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 999px;
+}
+
+/* =========================
+   AUTH HEADER
+========================= */
 
 .auth-header {
     margin-bottom: 26px;
@@ -257,12 +322,15 @@ button {
 
 .auth-header h2 {
     color: var(--text);
+
     font-size: 30px;
+
     margin-bottom: 8px;
 }
 
 .auth-header p {
     color: var(--muted);
+
     font-size: 15px;
 }
 
@@ -288,13 +356,17 @@ button {
 
 .auth-message.success {
     background: #ecfdf5;
+
     border: 1px solid #a7f3d0;
+
     color: #047857;
 }
 
 .auth-message.error {
     background: #fef2f2;
+
     border: 1px solid #fecaca;
+
     color: #b91c1c;
 }
 
@@ -304,7 +376,9 @@ button {
 
 .form-row {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 14px;
 }
 
@@ -320,6 +394,7 @@ button {
     color: #334155;
 
     font-size: 13px;
+
     font-weight: 700;
 }
 
@@ -331,6 +406,7 @@ button {
     padding: 0 14px;
 
     border: 1px solid var(--border);
+
     border-radius: 10px;
 
     outline: none;
@@ -341,11 +417,16 @@ button {
 
     transition:
         border-color 0.2s,
-        box-shadow 0.2s;
+        box-shadow 0.2s,
+        transform 0.2s;
 }
 
 .form-group input::placeholder {
     color: #94a3b8;
+}
+
+.form-group input:hover {
+    border-color: #bfcee0;
 }
 
 .form-group input:focus {
@@ -376,11 +457,13 @@ button {
     transform: translateY(-50%);
 
     border: 0;
+
     background: transparent;
 
     color: var(--primary);
 
     font-size: 12px;
+
     font-weight: 700;
 }
 
@@ -432,7 +515,9 @@ button {
 
 .form-options {
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     margin: 5px 0 20px;
@@ -441,7 +526,9 @@ button {
 .checkbox-label,
 .terms-label {
     display: flex;
+
     align-items: flex-start;
+
     gap: 8px;
 
     color: var(--muted);
@@ -454,16 +541,19 @@ button {
 .checkbox-label input,
 .terms-label input {
     accent-color: var(--primary);
+
     margin-top: 2px;
 }
 
 .text-button {
     border: 0;
+
     background: transparent;
 
     color: var(--primary);
 
     font-size: 12px;
+
     font-weight: 700;
 }
 
@@ -483,6 +573,7 @@ button {
 
 .terms-label a {
     color: var(--primary);
+
     text-decoration: none;
 }
 
@@ -496,9 +587,11 @@ button {
 
 .auth-btn {
     width: 100%;
+
     height: 50px;
 
     border: 0;
+
     border-radius: 11px;
 
     background:
@@ -511,6 +604,7 @@ button {
     color: white;
 
     font-size: 15px;
+
     font-weight: 800;
 
     box-shadow:
@@ -529,9 +623,16 @@ button {
         0 12px 25px rgba(37, 99, 235, 0.28);
 }
 
+.auth-btn:active {
+    transform: translateY(0);
+}
+
 .auth-btn:disabled {
     opacity: 0.7;
+
     cursor: not-allowed;
+
+    transform: none;
 }
 
 /* =========================
@@ -540,7 +641,9 @@ button {
 
 .divider {
     display: flex;
+
     align-items: center;
+
     gap: 12px;
 
     margin: 25px 0;
@@ -548,6 +651,7 @@ button {
     color: #94a3b8;
 
     font-size: 10px;
+
     font-weight: 700;
 }
 
@@ -563,7 +667,7 @@ button {
 }
 
 /* =========================
-   SWITCH
+   ACCOUNT SWITCH
 ========================= */
 
 .auth-switch {
@@ -586,6 +690,10 @@ button {
     text-decoration: underline;
 }
 
+/* =========================
+   BACK HOME
+========================= */
+
 .back-home {
     display: block;
 
@@ -598,6 +706,8 @@ button {
     font-size: 12px;
 
     text-decoration: none;
+
+    transition: color 0.2s;
 }
 
 .back-home:hover {
@@ -633,6 +743,10 @@ button {
     }
 }
 
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 520px) {
 
     .auth-brand {
@@ -647,6 +761,7 @@ button {
 
     .brand-content h1 {
         font-size: 35px;
+
         letter-spacing: -1px;
     }
 
@@ -668,10 +783,42 @@ button {
 
     .form-row {
         grid-template-columns: 1fr;
+
         gap: 0;
     }
 
     .auth-header h2 {
         font-size: 26px;
     }
+
+    .form-options {
+        gap: 10px;
+    }
 }
+
+/* =========================
+   VERY SMALL SCREENS
+========================= */
+
+@media (max-width: 360px) {
+
+    .auth-brand {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .auth-logo {
+        left: 20px;
+    }
+
+    .auth-card {
+        width: calc(100% - 16px);
+
+        padding: 24px 18px;
+    }
+
+    .brand-content h1 {
+        font-size: 31px;
+    }
+}
+```
