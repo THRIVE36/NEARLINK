@@ -1,128 +1,207 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login — NearLink</title>
-    <link rel="stylesheet" href="../css/auth.css">
+
+```
+<title>Login — NearLink</title>
+
+<link rel="stylesheet" href="auth.css">
+```
+
 </head>
 
 <body class="auth-page">
 
-    <main class="auth-container">
+```
+<main class="auth-container">
 
-        <section class="auth-brand">
-            <a href="../index.html" class="auth-logo">
-                <span class="logo-mark">N</span>
-                <span>NearLink</span>
-            </a>
+    <!-- BRAND SECTION -->
+    <section class="auth-brand">
 
-            <div class="brand-content">
-                <span class="brand-badge">NEARLINK</span>
-                <h1>Everything you need, <span>right around you.</span></h1>
-                <p>
-                    Connect with trusted local services, businesses,
-                    riders, professionals and your community.
-                </p>
+        <a href="index.html" class="auth-logo">
+            <span class="logo-mark">N</span>
+            <span>NearLink</span>
+        </a>
 
-                <div class="auth-benefits">
-                    <div>
-                        <span>✓</span>
-                        Local services
-                    </div>
-                    <div>
-                        <span>✓</span>
-                        Trusted providers
-                    </div>
-                    <div>
-                        <span>✓</span>
-                        Easy & convenient
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="brand-content">
 
-        <section class="auth-card">
+            <span class="brand-badge">NEARLINK</span>
 
-            <div class="auth-header">
-                <h2>Welcome back</h2>
-                <p>Login to continue to NearLink.</p>
-            </div>
+            <h1>
+                Everything you need,
+                <span>right around you.</span>
+            </h1>
 
-            <div id="authMessage" class="auth-message"></div>
-
-            <form id="loginForm">
-
-                <div class="form-group">
-                    <label for="loginEmail">Email address</label>
-                    <input
-                        type="email"
-                        id="loginEmail"
-                        name="email"
-                        placeholder="you@example.com"
-                        autocomplete="email"
-                        required
-                    >
-                </div>
-
-                <div class="form-group">
-                    <label for="loginPassword">Password</label>
-
-                    <div class="password-wrapper">
-                        <input
-                            type="password"
-                            id="loginPassword"
-                            name="password"
-                            placeholder="Enter your password"
-                            autocomplete="current-password"
-                            required
-                        >
-
-                        <button
-                            type="button"
-                            class="password-toggle"
-                            data-target="loginPassword"
-                            aria-label="Show password"
-                        >
-                            Show
-                        </button>
-                    </div>
-                </div>
-
-                <div class="form-options">
-                    <label class="checkbox-label">
-                        <input type="checkbox" id="rememberMe">
-                        <span>Remember me</span>
-                    </label>
-
-                    <button type="button" id="forgotPassword" class="text-button">
-                        Forgot password?
-                    </button>
-                </div>
-
-                <button type="submit" class="auth-btn" id="loginBtn">
-                    Login
-                </button>
-
-            </form>
-
-            <div class="divider">
-                <span>OR</span>
-            </div>
-
-            <p class="auth-switch">
-                Don't have an account?
-                <a href="signup.html">Create an account</a>
+            <p>
+                Connect with trusted local services, businesses,
+                riders, professionals and your community.
             </p>
 
-            <a href="../index.html" class="back-home">
-                ← Back to NearLink
+            <div class="auth-benefits">
+
+                <div>
+                    <span>✓</span>
+                    Local services
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Trusted providers
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Easy & convenient
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- LOGIN CARD -->
+    <section class="auth-card">
+
+        <div class="auth-header">
+            <h2>Welcome back</h2>
+            <p>Login to continue to NearLink.</p>
+        </div>
+
+
+        <!-- AUTH MESSAGE -->
+        <div id="authMessage" class="auth-message"></div>
+
+
+        <!-- LOGIN FORM -->
+        <form id="loginForm">
+
+            <!-- EMAIL -->
+            <div class="form-group">
+
+                <label for="loginEmail">
+                    Email address
+                </label>
+
+                <input
+                    type="email"
+                    id="loginEmail"
+                    name="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required
+                >
+
+            </div>
+
+
+            <!-- PASSWORD -->
+            <div class="form-group">
+
+                <label for="loginPassword">
+                    Password
+                </label>
+
+                <div class="password-wrapper">
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        name="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        data-target="loginPassword"
+                        aria-label="Show password"
+                    >
+                        Show
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- OPTIONS -->
+            <div class="form-options">
+
+                <label class="checkbox-label">
+
+                    <input
+                        type="checkbox"
+                        id="rememberMe"
+                    >
+
+                    <span>
+                        Remember me
+                    </span>
+
+                </label>
+
+
+                <button
+                    type="button"
+                    id="forgotPassword"
+                    class="text-button"
+                >
+                    Forgot password?
+                </button>
+
+            </div>
+
+
+            <!-- LOGIN BUTTON -->
+            <button
+                type="submit"
+                class="auth-btn"
+                id="loginBtn"
+            >
+                Login
+            </button>
+
+        </form>
+
+
+        <!-- DIVIDER -->
+        <div class="divider">
+            <span>OR</span>
+        </div>
+
+
+        <!-- SIGNUP -->
+        <p class="auth-switch">
+
+            Don't have an account?
+
+            <a href="signup.html">
+                Create an account
             </a>
 
-        </section>
+        </p>
 
-    </main>
 
-    <script src="../js/auth.js"></script>
+        <!-- HOME -->
+        <a href="index.html" class="back-home">
+            ← Back to NearLink
+        </a>
+
+    </section>
+
+</main>
+
+
+<!-- AUTH JAVASCRIPT -->
+<script src="auth.js"></script>
+```
+
 </body>
 </html>
