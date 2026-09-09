@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NearLink Service</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/service.css">
+</head>
+
+<body class="service-page">
+
+    <div class="service-shell">
+
+        <!-- TOP NAV -->
+        <header class="service-nav">
+            <a href="app.html" class="back-button">
+                ←
+            </a>
+
+            <div class="service-nav-brand">
+                <div class="service-logo-mark">N</div>
+                <span>NearLink</span>
+            </div>
+
+            <div class="service-nav-status">
+                <span class="status-dot"></span>
+                Nearby
+            </div>
+        </header>
+
+
+        <!-- SERVICE HERO -->
+        <main>
+
+            <section class="service-hero">
+
+                <div class="service-provider-icon" id="serviceIcon">
+                    🚗
+                </div>
+
+                <div class="service-hero-content">
+
+                    <div class="service-badge" id="serviceBadge">
+                        Local service
+                    </div>
+
+                    <h1 id="serviceTitle">
+                        Book a Ride
+                    </h1>
+
+                    <p id="serviceDescription">
+                        Request a reliable ride from a trusted provider near you.
+                    </p>
+
+                    <div class="service-provider">
+                        <strong id="providerName">SafeRide</strong>
+
+                        <span>⭐ 4.9</span>
+
+                        <span>📍 0.5 km</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- DYNAMIC FORM -->
+            <section class="service-card">
+
+                <div class="service-card-header">
+                    <div>
+                        <span class="eyebrow">REQUEST</span>
+                        <h2 id="formTitle">Ride details</h2>
+                    </div>
+
+                    <div class="step-indicator">
+                        <span class="active"></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+
+                <form id="serviceForm">
+
+                    <div id="formFields"></div>
+
+
+                    <!-- SUMMARY -->
+                    <div class="service-summary" id="serviceSummary">
+
+                        <div class="summary-row">
+                            <span>Service</span>
+                            <strong id="summaryService">SafeRide</strong>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Location</span>
+                            <strong id="summaryLocation">Not selected</strong>
+                        </div>
+
+                        <div class="summary-row total-row">
+                            <span id="summaryPriceLabel">
+                                Estimated price
+                            </span>
+
+                            <strong id="summaryPrice">
+                                —
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="primary-service-button"
+                        id="submitService"
+                    >
+                        Continue
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- TRUST -->
+            <section class="service-trust">
+
+                <div class="trust-item">
+                    <span>✓</span>
+                    <div>
+                        <strong>Trusted providers</strong>
+                        <small>Verified local services</small>
+                    </div>
+                </div>
+
+                <div class="trust-item">
+                    <span>🔒</span>
+                    <div>
+                        <strong>Secure request</strong>
+                        <small>Your details stay private</small>
+                    </div>
+                </div>
+
+                <div class="trust-item">
+                    <span>⚡</span>
+                    <div>
+                        <strong>Fast response</strong>
+                        <small>Connect with nearby providers</small>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- SUCCESS MODAL -->
+    <div class="service-success-overlay" id="successOverlay">
+
+        <div class="service-success">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <span class="success-label">
+                REQUEST SENT
+            </span>
+
+            <h2 id="successTitle">
+                Request submitted
+            </h2>
+
+            <p id="successMessage">
+                Your request has been sent to the provider.
+            </p>
+
+            <div class="success-actions">
+
+                <a href="app.html" class="success-home">
+                    Back to NearLink
+                </a>
+
+                <button
+                    type="button"
+                    id="viewActivityBtn"
+                    class="success-secondary"
+                >
+                    View activity
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="serviceToast" class="service-toast"></div>
+
+
+    <script src="../js/service.js"></script>
+
+</body>
+</html>
